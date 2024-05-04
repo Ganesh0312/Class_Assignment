@@ -1,0 +1,186 @@
+Example - 1
+
+<!-- 1)create a one index page in that add your information using heading tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Information</title>
+</head>
+<body>
+    <header>
+        <h1>My Information</h1>
+    </header>
+
+        <h2><u>About Me</u></h2>
+        <p> <strong> and highly motivated Engineer with a passion for Full Stack Development. Seeking a challenging position in a progressive organization where I can leverage my expertise in 
+            <br>front-end and back-end technologies to design and develop innovative web applications that deliver exceptional user experiences.</strong></p>
+    <section>
+        <h2><u> Information </u></h2>
+       
+            <h3><i>Email:</i> bobadeganeshd@gmail.com</h3>
+            <h3><i> Details :</i> 9146096429 </h3>
+            <h3><i>Git-Hub :</i><a href="https://github.com/Ganesh0312">Open Git-Hub</a></h3>
+    </section>
+    <section>
+        <h2><u>Skills</u></h2>
+            <h3>Asp.Net Framework</h3>
+            <h3>Asp.net Core MVC Framework</h3>
+            <h3>Information Technology</h3>
+            <h3>Web Application Development</h3> 
+        </ul>
+    </section>
+    
+</body>
+</html>
+======================================================================================
+Example - 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Cover</title>
+    <style>
+        .book {
+	  width: 250px;
+	  height:300px;
+	  background: #000;
+	  margin-top: 50px;
+	  margin-left: 250px;
+	  perspective: 1000px;
+	  color:#fff;
+
+	}
+
+	.cover  {
+	  width: 210px;
+	  height: 300px;
+	  left:40px;
+	  position: relative;
+	  transform: rotateY(-20deg) ;
+	  transform-style:preserve-3d;
+	  transform-origin:left;
+	  transition: all .6s;
+	}
+
+	.book:hover .cover {
+	  transform: rotateY(-180deg) ;
+	}
+
+	figure {
+	  margin: 0;
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  backface-visibility:hidden;
+	  font-size:32px;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	}
+
+	.front  {
+	  background: blue;
+	}
+
+	.back  {
+	  background: green;
+	  transform: rotateY(180deg);
+	}
+
+	.content {
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  font-size:22px;
+	  left:5%;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	}
+    
+    </style>
+</head>
+<body>
+
+    <div class="book">
+		<div class="content"> 
+			<h3>Hi !! </h3>
+		</div>
+		<div class="cover"> 
+			<figure class="front"> <h1>Book</h1> </figure>
+			<figure class="back"></figure>
+		</div>
+	</div>
+</body>
+</html>
+======================================================================================
+Example - 3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Information</title>
+</head>
+<body>
+    <center>
+    <h1>Information About HTML</h1>
+    <br>
+    <img src="/Images/htmlimage.png" alt="Html Logo Image" style="height: auto; width: auto;">
+
+    <br>
+    <br>
+    <br>
+    
+    <p> <String>HTML</String> stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is a combination of Hypertext and Markup language. 
+        <br>Hypertext defines the link between web pages. A markup language is used to define the text document within the tag which defines the structure of web pages. 
+        <br>This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly.
+         <br>Most markup languages (e.g. HTML) are human-readable. The language uses tags to define what manipulation has to be done on the text.</p>
+    </center>
+</body>
+</html>
+======================================================================================
+Example - 4
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Web Page</title>
+</head>
+<body>
+    <h1><i>Well-Come User </i></h1>
+
+    <p>Hello User I am curentlly learning java full stack development course at GrowMore Technoine Pvt. Ltd.</p>
+    <strong>Here you can check my information</strong>
+    <a href="/HTML Assignments/Assignment1/Example1.html"><u>Click here To check</u></a><br><br>
+
+    <strong>My Blogs </strong><br>
+    <a href="/HTML Assignments/Assignment1/Example3.html">HTML Blog</a>
+    
+</body>
+</html>
+======================================================================================
+Example - 5
+
+<!-- 5)Write a code for button tag and link img -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Link Example</title>
+</head>
+<body>
+    <h1>Showing Naruto Image</h1>
+    <button type="submit"><img src="/Images/naruto.jpg" alt="naruto" style="height: 500px;; width: 600px;"></button>
+    <!-- Make Image As a button -->
+</body>
+</html>
+======================================================================================

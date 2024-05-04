@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s ease;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .box:hover {
+            background-color: #2980b9;
+        }
+
+        .dropzone {
+            width: 300px;
+            height: 300px;
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 50px auto;
+        }
+        h3{
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" draggable="true" ondragstart="dragStart(event)">1</div>
+        <div class="box" draggable="true" ondragstart="dragStart(event)">2</div>
+        <div class="box" draggable="true" ondragstart="dragStart(event)">3</div>
+        <div class="box" draggable="true" ondragstart="dragStart(event)">4</div>
+    </div>
+
+    <div class="dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <h3>Drap zone</h3>
+
+    <script>
+        function dragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.textContent);
+            e.target.classList.add('dragging');
+        }
+
+        function drop(e) {
+            e.preventDefault();
+            const data = e.dataTransfer.getData('text/plain');
+            const newItem = document.createElement('div');
+            newItem.classList.add('box');
+            newItem.textContent = data;
+            dropzone.appendChild(newItem);
+            const draggedItem = document.querySelector('.box.dragging');
+            if (draggedItem) {
+                draggedItem.parentNode.removeChild(draggedItem);
+            }
+        }
+
+        function allowDrop(e) {
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>

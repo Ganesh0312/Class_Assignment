@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1)Create one object print name, id and salary 
+
+        let person={
+            name:"Ganesh",
+            id:101,
+            salary:234567
+        }
+        for(let i in person){
+            document.writeln(person[i]);
+        } 
+        op:-Ganesh 101 234567 */
+
+        /*2)Create object using new keyword and print name, id and salary */
+        /* let emp=new Object();
+        emp.name="Ganesh";
+        emp.id=1;
+        emp.address="Baramati";
+        emp.salary=123456;
+        for(let i in emp){
+            document.writeln(emp[i]);
+        } 
+        output:-Ganesh 1 Baramati 123456 */
+        /*3)create object using an Object constructor and print name, id and salary */
+        /* function emp(id,name,salary){  
+this.id=id;  
+this.name=name;  
+this.salary=salary;  
+}  
+e=new emp(103,"Vishal ",30000);  
+  
+document.write(e.id+" "+e.name+" "+e.salary);  
+    op:- 103 Vishal 30000 */
+
+    /*4)create array using new keyword print at least 5 emp data */
+    /* let arr=new Array();
+    arr[0]=10;
+    arr[1]=20;
+    arr[2]=30;
+    arr[3]=40;
+    arr[4]=50;
+    for(let i in arr){
+        document.writeln(arr[i]);
+    } 
+    OUTPUT:- 10 20 30 40 50 */
+
+        /*5)create array using JavaScript array constructor (new keyword) */
+        /* let arr=new Array(1,2,3,4,5);
+        for(let i in arr){
+        document.writeln(arr[i]);
+        }
+        output:-1 2 3 4 5 */
+
+    /*)print the combination of two arrays.
+1.arr1=[“c”,”c++”,”java”,”javascript”];
+2.arr2=["Java","JavaScript","Android"];*/
+//     let arr1 = ["c", "c++", "java", "javascript"];
+// let arr2 = ["Java", "JavaScript", "Android"];
+// let com = arr1.concat(arr2);
+// document.writeln("Combined Array: ", com);
+//         OUTPUT:- Combined Array:c,c++,java,javascript,Java,JavaScript,Android
+
+/* ) print the combination of three arrays.
+1. var arr1=["C","C++","Python"];
+2. var arr2=["Java","JavaScript","Android"];
+3. var arr3=["Ruby","Kotlin"]; */
+
+// var arr1=["C","C++","Python"];
+// var arr2=["Java","JavaScript","Android"];
+// var arr3=["Ruby","Kotlin"];
+// let arr4=new Array(arr1+" "+arr2+" "+arr3);
+// document.writeln(arr4);
+// OUTPUT:-C,C++,Python Java,JavaScript,Android Ruby,Kotlin
+
+/*8)how to contact directly array with another array Arr1 is given and array two is directly concat
+var arr=["C","C++","Python"];*/
+
+/* var arr1=["C","C++","Python"];
+let arr2=["Java", "JavaScript", "Ruby"];
+
+let con=arr2.concat(arr1);
+for(let i in con){
+    document.writeln(con[i]);
+}
+OUTPUT:-Java JavaScript Ruby C C++ Python */
+
+/*9)example to print a character.
+1. var str="Javatpoint"; */
+    /*var str="Javatpoint"; 
+    document.writeln("print a character = "+str.charAt(4));
+
+    OUTPUT:- print a character = t */
+
+/*10)In this example, we will print the last character.
+2. var str="Javatpoint"; */
+    /* var str="Javatpoint";
+    document.writeln("Last Index of String = "+str[str.length -1]);
+    OUTPUT:= Last Index of String = t */
+
+/* 12)print the combination of two strings. */
+     /* var x="Javatpoint";
+     var y=".com";
+     document.writeln("Concat two string using Concat method = "+x.concat(y));
+     document.writeln(" <br> Concat two string = "+(x+" "+y));
+     OUTPUT:= Concat two string using Concat method = Javatpoint.com
+Concat two string = Javatpoint .com  */
+
+/*13)print the combination of three strings. */
+    /* var x="Javatpoint";
+     var y=".com";
+    var z=" Tutorials";
+    document.writeln("combination of three strings = "+x+y+" "+z);
+OUTPUT:-combination of three strings = Javatpoint.com Tutorials */
+
+/*14)print the combination of three strings. provided the space between the strings while
+initializing it.*/
+    /* var x="Javatpoint";
+     var y=".com";
+    var z=" Tutorials";
+    document.writeln("combination of three strings = "+x+" "+y+" "+z);
+    OUTPUT:-combination of three strings = Javatpoint .com Tutorials */
+
+/* 15)print the position of a single character */
+    /* var web="Learn JavaScript on Javatpoint";
+    document.writeln("position of a single character = "+web.indexOf('n'));
+OUTPUT:-position of a single character = 4 */
+
+/*print the part of the string by passing the starting and ending index. */
+     /* var str="hello how are you";
+     document.writeln("part of the string by passing the starting and ending index = "+str.slice(5,15));
+     OUTPUT:-part of the string by passing the starting and ending index = how are y */
+    </script>
+</body>
+</html>

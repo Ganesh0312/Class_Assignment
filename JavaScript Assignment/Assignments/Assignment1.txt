@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        /*let num1=10;
+        let num2=20;
+        document.writeln("num1 + num2 = "+num1+num2); */
+
+        /*2)Create a variable str and assign it the value "Hello, ". Create another
+variable name and assign it your name. Print the concatenation of str and
+name.
+       let str="hello";
+       let str1=" Ganesh";
+       let str2=str+str1;
+       document.writeln("Concatenation of str and sttr1 = "+str2);   */
+
+       /*3)Create a variable num and assign it a number of your choice. Increment
+the value of num by 1 and print the result.*/
+
+        // let num=5;
+        // --num;
+        // document.writeln("after decrement of num = "+num)
+
+        /*5)Create a variable x and assign it the value 5. Create another variable y
+and assign it the value 2. Print the result of x raised to the power of y.*/
+
+        // let  x=5;
+        // let y=x*x;
+        // document.writeln(y);
+
+        /* 6)Create a variable str and assign it a string of your choice. Print the length
+of the string. 
+        let str="House Of Dragon";
+        document.writeln("legth of string  = "+str.length); */
+
+        /* 7)Create a variable num and assign it a number of your choice. Convert
+num to a string and print it.
+
+        let num=5;
+        let str=num.toString();
+
+        document.writeln("num to string convert = "+str);*/
+
+        /*8)Create a variable num and assign it a floating-point number of your
+choice. Round num to the nearest integer and print it. 
+
+        let num=4.5;
+        document.writeln("Round number to the nearest interger of "+num+" = "+Math.round(num)); */
+
+        /*11)Write a JavaScript program that takes two numbers as inputs and
+calculates their sum, difference, product, and quotient. Then, display the
+results in the console. 
+
+        let num1=parseFloat(prompt("Enter number 1"));
+        let num2=parseFloat(prompt("Enter number 2"));
+        let sum=num1+num2;
+        document.writeln("<br>"," sum = "+sum);
+        let diff = num1 - num2;
+        document.writeln("<br>"," Diffrence = "+diff);
+        let prod = num1 * num2;
+        document.writeln("<br>"," Product = "+prod);
+        let quot = num1 / num2;
+        document.writeln("<br>"," Quotioent = "+quot); */
+        /*12)Write a program that takes a number as input and checks if it's positive,
+negative, or zero. Print the result accordingly.
+
+        let num=parseInt(prompt("Enter number"));
+        if(num<0){
+            document.writeln("Number is negative");
+        }
+        else if(num==0){
+            document.writeln("number is equal to zero ");
+        }
+        else{
+            document.writeln("number is positive");
+        }*/
+
+        /*13)Write a program that takes two numbers as input and prints the larger of the two.
+        let num1=parseInt(prompt("Enter number 1"));
+        let num2=parseInt(prompt("Enter number 2"));
+        if(num1<num2){
+            document.writeln(num2+" number is larger");
+        }else{
+            document.writeln(num1+" is larger");
+        } */
+
+        /*14)Write a program that takes a year as input and checks if it's a leap year
+or not. Print the result accordingly.
+        let year=parseInt(prompt("Enter year"));  
+        if(year%4==0){
+            document.writeln(year+" year is leap year");
+        }
+        else{
+            document.writeln(year+" is not leap year");
+        } */
+
+        /*15) Write a program that takes a number as input and checks if it's even or
+odd. Print the result accordingly. 
+    let num=parseInt(prompt("Enter number"));
+    if(num%2==0){
+        document.writeln(num+" is even");
+    }
+    else{
+        document.writeln(num+" is Odd");
+    }*/
+
+    /*16)Write a program that takes three numbers as input and prints the largest
+of the three.
+        let num1=parseInt(prompt("Enter number 1"));
+        let num2=parseInt(prompt("Enter number 2"));
+        let num3=parseInt(prompt("Enter number 3"));
+
+        if(num1>num2&&num1>num3){
+            document.writeln(num1+" is greatest number");
+        }else if(num2>num3&&num2>num1){
+            document.writeln(num2+" is greatest number");
+        }
+        else{
+            document.writeln(num3+" is greatest number");
+        }
+        */
+
+        /*17)Write a program that takes an age as input and determines if a person is
+eligible to vote (age 18 and above). Print the result accordingly.
+
+        let age=20;
+        if(age>=18){
+            document.writeln("person is eligible to vote");
+        }else{
+            document.writeln("person is not eligible to vote");
+        }*/
+
+        /*18) Write a program to print numbers from 1 to 10 using a for loop
+        for(let i=0;i<=10;i++){
+            document.writeln(i);
+        } */
+
+        /*19) Write a program to print even numbers between 1 and 20 using a for loop.
+        for(let i=0;i<=20;i++){
+            if(i%2==0){
+                document.writeln(i);
+            }
+        }*/
+
+        /*20)Write a program to print the Fibonacci series up to 10 terms using a for loop. 
+        let a=0;
+        let b=1;
+        let fib=0;
+        document.writeln(a+" "+b);
+        for(let i=0;i<=10;i++){
+            fib=a+b;
+            document.writeln(fib);
+            a=b;
+            b=fib;
+        } */
+
+       /*21)Write a program to calculate the factorial of a number using a for loop. 
+        let num=5;
+        let fact=1;
+        for(let i=1;i<=num;i++){
+            fact=fact*i;
+        }
+        document.writeln("Factorial = "+fact) */
+
+        /*22) Write a program to print numbers from 10 to 1 using a while loop.
+        let i=10;
+        while(i>=1){
+            document.writeln(i);
+            i--;
+        } */
+
+        /*23) Write a program to find the sum of digits of a number using a while loop.
+        let number = prompt("Enter a number:");
+number = parseInt(number);
+let sum = 0;
+let originalNumber = number;
+while (number > 0) {
+    let digit = number % 10;
+    sum += digit;
+    number = Math.floor(number / 10);
+}
+document.writeln("The sum of digits of", originalNumber, "is:", sum); */
+
+/*24)Write a program to print even numbers between 1 and 20 using a do-while loop.
+    let i=1;
+    do{
+        document.writeln(i);
+        i++;
+    }while(i<=20) */
+    /*25)Write a program to find the factorial of a number using a do-while loop.
+    let fact=1;
+    let num=5;
+    let i=1;
+    do{
+        fact=fact*i;
+        i++;
+    }while(i<=num)
+    document.writeln("Factorial of num = "+fact); */
+
+    /*26)Write a program to print numbers from 1 to 10 but skip multiples of 3 using a for loop. 
+    for(let i=1;i<=10;i++){
+        if(i%3!==0){
+            document.writeln(i);
+        }
+    }*/
+
+    /*28)Write a program to iterate over the properties of an object using a for...in
+loop and print the property names and their corresponding values.
+    let emp={
+        id:1,
+        name:"Ganesh",
+        address:"Baramati",
+        salary:30000
+    }
+    for(let key in emp){
+        document.writeln(emp[key]);
+    } */
+
+        /*29)Write a program to iterate over the elements of an array using a for...of
+loop and print each element. 
+const cars = ["BMW", "Volvo", "Mini"];
+
+for (let x of cars) {
+  document.writeln(x);
+}
+*/
+/*30)Write a program to find the sum of all elements in an array using a for...of loop.
+let array = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let num of array) {
+    sum += num;
+}
+document.writeln("Sum of all elements:", sum); */
+
+/*31)Write a program to iterate over the characters of a string using a for...of
+loop and print each character.
+let name="Ganesh";
+for(let a of name){
+    document.writeln("<br>",a);
+} */
+/*32)Write a program to iterate over the elements of a nested array using a
+combination of for...of and for...of loops and print each element.
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+for (let a of arr) {
+    for (let i of a) {
+        document.writeln(a);
+    }
+} */
+
+/*33)Write a program to iterate over the properties of an object and check if
+any property's value is a function using a for...in loop. 
+
+let emp = {
+    name: "John",
+    age: 30,
+    value:"function",
+    add: "salary"
+};
+for (let a in emp) {
+    if ( emp[a] == "function") {
+        document.writeln("Emp with a function value.");
+    } 
+} */
+/*34)Write a program to iterate over the elements of an array and double
+each element using a for...of loop.
+let array = [1, 2, 3, 4, 5];
+
+for (let num of array) {
+    document.writeln(num * 2);
+} */
+
+/*35) Write a JavaScript function called calculateAverage that takes an array
+of numbers as a parameter and returns the average of those numbers. 
+function calculateAverage(numbers) {
+    let sum = 0;
+    for (let number of numbers) {
+        sum += number;
+    }
+    return sum/numbers.length;
+}
+let numbers=[1,2,3,4,5];
+document.writeln("Average: "+ calculateAverage(numbers)); */
+
+/*36) Write a function named calculateArea that takes the radius of a circle
+as input from the user and returns its area. Display the result 
+
+function calculateArea(radius) {
+    return Math.PI * radius * radius;
+}
+let radius = prompt("Enter the radius of the circle:");
+radius = parseFloat(radius);
+let area = calculateArea(radius);
+document.writeln("The area of the circle with radius ", radius, "is: ", area); */
+
+/*37)Write a function named checkPrime that takes a number as input from
+the user and returns true if it's prime, otherwise false. Display the result.
+function checkPrime(number) {
+    if (number < 2) {
+        return false;
+    }
+for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+let number = prompt("Enter a number:");
+number = parseInt(number);
+let isPrime = checkPrime(number);
+if (isPrime) {
+    document.writeln(number, "is a prime number.");
+} else {
+    document.writeln(number, "is not a prime number.");
+}
+*/
+
+    </Script> 
+</body>
+</html>

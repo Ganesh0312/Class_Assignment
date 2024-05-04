@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 300px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            position: absolute;
+
+            animation-name: animate;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+@keyframes animate{
+        from{
+            background-color: aqua;
+            width: 300px;
+            top: 10px;
+        }
+        to{
+            background-color: blue;
+            width: 50px;
+            top: 200px;
+        }
+}
+.text{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div><span class="text">Hello Sweety Mam</span></div>
+    
+    <script>
+        const div = document.querySelector('div');
+    div.addEventListener('animationiteration', () => {
+        if (!div.classList.contains('animated')) {
+            div.classList.add('animated');
+        } else {
+            div.classList.remove('animated');
+        }
+    });
+</script>
+</body>
+</html>

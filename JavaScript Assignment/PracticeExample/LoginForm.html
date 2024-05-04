@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            padding-top: 20px;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container{
+            border: 1px solid black;
+            height: 400px;
+            width: 400px;
+            background-color: white;
+            padding: 10px;
+        }
+        .login{
+            display: block;
+            text-align: center;
+            margin: 20px;
+        }
+        input{
+            padding: 8px;
+            width: 350px;
+        }
+        button{
+            padding: 8px;
+            width: 350px;
+            background-color: rgb(94, 94, 252);
+            color: white;
+        }
+        .div1{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login"><h1>Login</h1></div>
+        <label for="txt1">Email</label><br>
+        <input type="text" class="txt1" placeholder="--your Email"><br>
+        <label for="txt2">Password</label><br>
+        <input type="text" class="txt2" placeholder="--your password"><br><br>
+        <button>Login</button><br><br>
+        <div class="div1">
+        <span>Forgot Yur Password?<a href="#">Reset</a></span><br><br>
+        <hr><br>
+        <p>
+        <i class="fa-brands fa-google"></i>. Countinue with Google</p>
+        <p><i class="fa-brands fa-facebook"></i>. Countinue With Facebook</p>
+    </div>
+    </div>
+    
+</body>
+</html>

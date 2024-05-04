@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .main {
+            position: relative;
+            width: 300px; 
+        }
+        .campain-card {
+            position: relative;
+            border: 2px solid black;
+            height: 400px;
+            width: 100%; 
+            text-align: center;
+            z-index: 2;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        h3 {
+            margin-bottom: 100px;
+        }
+        .campain-card:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 3px 15px 10px greenyellow;
+        }
+        .back-1, .back-2 {
+            position: absolute;
+            top: 0;
+            width: 50%; 
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.5); 
+            transition: transform 0.3s ease;
+        }
+        .back-1 {
+            left: -50%; 
+        }
+        .back-2 {
+            right: -50%;
+        }
+        .campain-card:hover .back-1 {
+            transform: translateX(50%); 
+        }
+        .campain-card:hover .back-2 {
+            transform: translateX(-50%); 
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="campain-card">
+            <h3>Campaign</h3>
+            <img src="/Images/download (2).jpg" alt="">
+            <div class="back-1">
+                <img src="/Images/download (3).jpg" alt="">
+            </div>
+            <div class="back-2">
+                <img src="/Images/download.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

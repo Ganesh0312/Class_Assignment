@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="MemoryGame.css">
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <div class="score">Score: <span id="score">0</span></div>
+    <div class="grid-container" id="grid-container"></div>
+    <div class="actions">
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <script>
+        const cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F'];
+        const gridContainer = document.getElementById('grid-container');
+        const scoreElement = document.getElementById('score');
+        let flippedCards = [];
+        let score = 0;
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function generateGrid() {
+            const shuffledCards = shuffle(cards);
+
+            shuffledCards.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card');
+                cardElement.innerHTML = `
+                    <div class="content">${card}</div>
+                `;
+                cardElement.addEventListener('click', () => flipCard(cardElement));
+                gridContainer.appendChild(cardElement);
+            });
+        }
+
+        function flipCard(cardElement) {
+            if (flippedCards.length < 2 && !cardElement.classList.contains('flip')) {
+                cardElement.classList.add('flip');
+                flippedCards.push(cardElement);
+                if (flippedCards.length === 2) {
+                    setTimeout(checkMatch, 500);
+                }
+            }
+        }
+        function checkMatch() {
+            if (flippedCards[0].querySelector('.content').innerText === flippedCards[1].querySelector('.content').innerText) {
+                flippedCards.forEach(card => card.removeEventListener('click', flipCard));
+                score += 2;
+                scoreElement.textContent = score;
+            } else {
+                flippedCards.forEach(card => card.classList.remove('flip'));
+            }
+            flippedCards = [];
+        }
+        function restartGame() {
+            gridContainer.innerHTML = '';
+            generateGrid();
+            score = 0;
+            scoreElement.textContent = score;
+        }
+        generateGrid();
+    </script>
+</body>
+</html>

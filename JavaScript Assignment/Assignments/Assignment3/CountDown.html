@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .countdown {
+            text-align: center;
+        }
+
+        .timer {
+            font-size: 48px;
+            color: #333;
+        }
+
+        .animation-container {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .animation-container .text {
+            display: inline-block;
+            opacity: 0;
+            animation: moveText 1s infinite alternate;
+        }
+
+        @keyframes moveText {
+            from {
+                transform: translateY(100%);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <div class="timer" id="timer">10</div>
+        <div class="animation-container" id="animationContainer">
+            <span class="text">Get ready!</span>
+        </div>
+    </div>
+
+    <script>
+        const timerElement = document.getElementById('timer');
+        let countdown = 10;
+
+        function updateTimer() {
+            timerElement.textContent = countdown;
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(interval);
+                timerElement.textContent = 'Go!';
+                document.getElementById('animationContainer').innerHTML = '';
+            }
+        }
+        updateTimer();
+        const interval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>

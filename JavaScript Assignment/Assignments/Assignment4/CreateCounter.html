@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function createCounter(init) {
+  let count = init;
+
+  return {
+    increment: function() {
+      return ++count;
+    },
+    decrement: function() {
+      return --count;
+    },
+    reset: function() {
+      count = init;
+      return count;
+    }
+  };
+}
+
+const counter = createCounter(5);
+
+const calls = ["increment", "reset", "decrement"];
+
+const output = calls.map(call => {
+  switch(call) {
+    case 'increment':
+      return counter.increment();
+    case 'decrement':
+      return counter.decrement();
+    case 'reset':
+      return counter.reset();
+    default:
+      return null; 
+  }
+});
+
+console.log(output); 
+
+    </script> -->
+    <script>
+        function createCounter(init) {
+  let count = init;
+
+  return {
+    increment: function() {
+      return ++count;
+    },
+    decrement: function() {
+      return --count;
+    },
+    reset: function() {
+      count = init;
+      return count;
+    }
+  };
+}
+
+const calls = ["increment", "increment", "decrement", "reset", "reset"]; 
+
+const counter = createCounter(0);
+
+const output = calls.map(call => {
+  switch(call) {
+    case 'increment':
+      return counter.increment();
+    case 'decrement':
+      return counter.decrement();
+    case 'reset':
+      return counter.reset();
+    default:
+      return null; 
+  }
+});
+
+console.log(output); 
+
+    </script>
+</body>
+</html>

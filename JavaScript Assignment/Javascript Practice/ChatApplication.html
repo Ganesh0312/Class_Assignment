@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Chat App</title>
+  <style>
+    #chatDisplay{
+        width: 400px;
+        height:500px ;
+        border: 1px solid black;
+        text-align: center;
+    }
+    .container{
+        justify-content: center;
+        margin-left: 400px;
+        padding: 30px;
+        
+    }
+    #messageInput{
+        margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+  <div id="chatDisplay"></div>
+  <input type="text" id="messageInput" placeholder="Type your message here">
+  <button onclick="sendMessage()">Send</button> <button onclick="clearChat()">Clear Chat</button>
+</div>
+  <script>
+    function sendMessage() {
+      const messageInput = document.getElementById("messageInput");
+      const message = messageInput.value;
+
+      if (message.trim() === "") {
+        alert("Please enter a message.");
+        return;
+      }
+
+      const chatDisplay = document.getElementById("chatDisplay");
+      const newMessage = document.createElement("p");
+      newMessage.textContent = message;
+      chatDisplay.appendChild(newMessage);
+      messageInput.value = "";
+    }
+    function clearChat() {
+      const chatDisplay = document.getElementById("chatDisplay");
+      chatDisplay.innerHTML = ""; 
+    }
+  </script>
+</body>
+</html>

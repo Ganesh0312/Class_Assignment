@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;  
+        }
+        table{
+            border: 1px solid black;
+            background-color: gray;
+            height: auto;
+            width: auto;
+            padding: 10px;
+            color: white;
+            border-collapse: collapse;
+           text-align: center;
+           
+        }
+        .container img{
+            border-radius: 50%;
+        }
+        table th{
+            width: 200px;
+            
+        }
+        .td1{
+            display:flex;
+            align-items: center;
+        }
+        .td1 span{
+            color: greenyellow;
+        }
+        .line:not(:last-child) { 
+            border-bottom: 1px solid white; 
+        }
+        table button{
+            background-color: lightseagreen;
+        }
+        .icon{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Availibity</th>
+            <th>Email</th>
+            <th>Category</th>
+        </tr>
+        <tr class="line">
+            <div class="name"><td class="td1"><img src="https://picsum.photos/id/237/50/50" alt=""> <p>Ganesh Bobade <span> @ganesh</span></p></td></div>
+            <td><span class="icon"></span>Available</td>
+            <td>ganesh@gmail.com</td>
+            <td><Button class=".btn"> Friends</Button></td>
+        </tr>
+        <tr class="line">
+            <div class="name"><td class="td1"><img src="https://picsum.photos/id/237/50/50" alt=""> <p>Ganesh Bobade <span> @ganesh</span></p></td></div>
+            <td><span class="icon"></span>Available</td>
+            <td>ganesh@gmail.com</td>
+            <td><Button class=".btn"> Friends</Button></td>
+        </tr>
+        <tr class="line">
+            <div class="name"><td class="td1"><img src="https://picsum.photos/id/237/50/50" alt=""> <p>Ganesh Bobade <span> @ganesh</span></p></td></div>
+            <td><span class="icon"></span>Available</td>
+            <td>ganesh@gmail.com</td>
+            <td><Button class=".btn"> Friends</Button></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

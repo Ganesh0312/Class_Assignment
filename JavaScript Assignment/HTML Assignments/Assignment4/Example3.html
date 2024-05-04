@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            align-items: center;
+            text-align: center;
+        }
+        nav{
+            background-color: grey;
+            padding: 30px;
+            text-align: center;
+            padding: 10px;
+        }
+        .image{
+            float: left;
+            margin: 50px;
+            align-items: center;
+                        
+        }
+        .image {
+    text-align: center;
+            }
+        .imagesmain{
+           padding-left: 400px;
+           padding-right: 400px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            border-radius: 50%;
+        }
+        footer{
+            width: 100%;
+            padding: 5px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Delicious Pizza</h1>
+        <p>Order your faverite pizza now!</p>
+    </nav>
+
+    <h1>Menu</h1>
+<div class="imagesmain">
+    <div class="image">
+        <img src="/Images/naruto.jpg" alt="naruto">
+        <p>Pepperroni Pizza</p>
+        <p>$10</p>
+    </div>
+    <div class="image">
+        <img src="/Images/narutohd.jpg" alt="narutohd">
+        <p>Maggherita Pizza</p>
+        <p>$8</p>
+    </div> 
+
+    <div class="order">
+        <h1>Order Now</h1>
+        <select name="pizaname" size="1">
+            <option value="Pepperroni">Pepperroni Pizza</option>
+            <option value="marghrita">Margherita Pizza</option>
+        </select><br>
+        <label for="">Quentity:</label><br>
+        <input type="text" name="quentity" width="30px">
+        <button>Order</button> <br><br>
+    </div>
+</div>
+<footer>
+    <p>@2024 all right reserved by ganesh</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <style>
+    table{
+        border: 1px solid black;
+        height: auto;
+        width: 500px;
+    }
+    td{
+        border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Expense Tracker</h2>
+  
+  <label for="itemName">Item Name:</label>
+  <input type="text" id="itemName" placeholder="Enter item name">
+  
+  <label for="itemPrice">Item Price:</label>
+  <input type="number" id="itemPrice" placeholder="Enter item price">
+  
+  <button onclick="addItem()">Add Expense</button> <br><br>
+  
+  <table id="expenseTable" >
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Price</th>
+      </tr>
+    </thead>
+    <tbody id="expenseTableBody"></tbody>
+  </table>
+
+  <script>
+    function addItem(){
+      const itemName = document.getElementById("itemName").value;
+      const itemPrice = document.getElementById("itemPrice").value;
+
+      if (itemName.trim() === "" || itemPrice.trim() === "") {
+        alert("Please enter both item name and price.");
+        return;
+      }
+
+      const expenseTableBody = document.getElementById("expenseTableBody");
+      const newRow = expenseTableBody.insertRow();
+
+      const cell1 = newRow.insertCell(0);
+      const cell2 = newRow.insertCell(1);
+
+      cell1.textContent = itemName;
+      cell2.textContent = itemPrice;
+
+      document.getElementById("itemName").value = "";
+      document.getElementById("itemPrice").value = "";
+    }
+  </script>
+</body>
+</html>
